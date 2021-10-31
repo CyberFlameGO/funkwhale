@@ -26,7 +26,7 @@ def handler_create_user(
     permissions=[],
     upload_quota=None,
 ):
-    serializer = serializers.RS(
+    serializer = serializers.RegisterSerializer(
         data={
             "username": username,
             "email": email,
@@ -51,8 +51,6 @@ def handler_create_user(
             setattr(user, "permission_{}".format(permission), True)
         else:
             utils.logger.warn("Unknown permission %s", permission)
-    utils.logger.debug("Creating actor…")
-    user.actor = models.create_actor(user)
     user.save()
     return user
 
