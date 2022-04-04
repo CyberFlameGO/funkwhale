@@ -2497,10 +2497,9 @@ diff@5.0.0, diff@^5.0.0:
   resolved "https://registry.yarnpkg.com/diff/-/diff-5.0.0.tgz#7ed6ad76d859d030787ec35855f5b1daf31d852b"
   integrity sha512-/VTCrvm5Z0JGty/BWHljh+BAiw3IK+2j87NGMu8Nwc/f48WoDAC395uomO9ZD117ZOBaHmkX1oyLvkVM/aIT3w==
 
-django-channels@2.1.3:
+"django-channels@github:channels-frontend/django-channels#v2.1.3":
   version "2.1.3"
-  resolved "https://registry.yarnpkg.com/django-channels/-/django-channels-2.1.3.tgz#4d175b9d8553f3e2b1263b75de0b4f23fc9acac3"
-  integrity sha512-H0jzdw3XvBR3HC4FqMqhoM0M4iUlOJ1TCRpyL51r//8LX2KGAK7lA1+4JeTxvnlaq8xBvZ3mMTf55eaRoDcgKA==
+  resolved "https://codeload.github.com/channels-frontend/django-channels/tar.gz/072ea19d9d280b2ee52f0d09736caf34c95ec239"
   dependencies:
     "@babel/runtime" "^7.5.5"
     event-target-shim "^5.0.1"
