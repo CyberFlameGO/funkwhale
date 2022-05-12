@@ -232,6 +232,16 @@ test_front:
   tags:
     - docker
 
+test_integration:
+  interruptible: true
+  stage: test
+  image: cypress/base:16.14.2
+  before_script:
+    - cd front
+    - yarn install
+  script:
+    - yarn run cypress run
+
 build_docs:
   stage: build
   image: $CI_REGISTRY/funkwhale/backend-test-docker:3.10
