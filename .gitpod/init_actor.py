@@ -1,8 +1,8 @@
 import subprocess
-import requests
 import time
+import os
 
-INSTANCE_URL = subprocess.check_output(['gp', 'url', '8000']).decode()[:-1]
+INSTANCE_URL = os.environ['INSTANCE_URL']
 
 # Login to initialize user actor
 req = requests.Session()
@@ -12,9 +12,9 @@ print('Requesting csrftoken cookie')
 while True:
     try:
         res = req.get(INSTANCE_URL + '/login')
+        print(res.status_code, res.content, res.cookies)
         token = res.cookies['csrftoken']
     except:
-        print(res.content)
         time.sleep(1)
         print('Re-requesting csrftoken cookie')
 
