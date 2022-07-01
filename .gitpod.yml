@@ -34,9 +34,7 @@ tasks:
       # Login with cURL to create actors
       docker-compose up -d nginx api front
       gp ports await 8000
-      sleep 20 # allow django to start
       python .gitpod/init_actor.py
-      docker-compose logs
 
       # Import music
       git clone https://dev.funkwhale.audio/funkwhale/catalog.git
