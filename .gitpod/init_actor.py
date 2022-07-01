@@ -14,6 +14,7 @@ while True:
         res = req.get(INSTANCE_URL + '/login')
         token = res.cookies['csrftoken']
     except:
+        print(res.content)
         time.sleep(1)
         print('Re-requesting csrftoken cookie')
 
