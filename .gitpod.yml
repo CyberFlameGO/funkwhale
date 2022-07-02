@@ -34,7 +34,7 @@ tasks:
       # Login with cURL to create actors
       docker-compose up -d nginx api front
       gp ports await 8000
-      INSTANCE_URL=`gp url 8000` python .gitpod/init_actor.py
+      python .gitpod/init_actor.py
 
       # Import music
       git clone https://dev.funkwhale.audio/funkwhale/catalog.git

@@ -1,8 +1,7 @@
 import requests
 import time
-import os
 
-INSTANCE_URL = os.environ['INSTANCE_URL']
+INSTANCE_URL = 'http://localhost'
 
 # Login to initialize user actor
 req = requests.Session()
