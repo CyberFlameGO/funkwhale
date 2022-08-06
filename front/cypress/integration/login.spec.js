@@ -1,6 +1,3 @@
-const username = "testing"
-const password = "testing1234"
-
 Cypress.on('uncaught:exception', (err, runnable) => {
     // returning false here prevents Cypress from
     // failing the test
@@ -10,7 +7,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 describe('The login', () => {
 
   it('is working with UI', () => {
-    cy.login(username, password)
+    cy.login()
 
     cy.url().should('include', '/library')
     cy.getCookie('sessionid').should('exist')
