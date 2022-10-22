@@ -1,3 +1,6 @@
 {
-  "baseUrl": "https://demo.funkwhale.audio"
+  "baseUrl": "https://demo.funkwhale.audio",
+  "env": {
+    "remote_api": false
+  }
 }
