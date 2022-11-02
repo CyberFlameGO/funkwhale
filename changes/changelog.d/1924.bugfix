@@ -1,0 +1,2 @@
+Fix user requests and reports filtering (#1924)
+Fix conent form autofocus despite `autofocus` prop being set to `false` (#1924)
